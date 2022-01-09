@@ -1,0 +1,4 @@
+# SSH
+my.dynamic.hostname.com,some.other.hostname:tcp:22,tcp:80 # Allow SSH and FTP from my dynamic IP's
+# HTTP
+*:tcp:80,tcp:443 # Allow HTTP and HTTPS from everywhere
