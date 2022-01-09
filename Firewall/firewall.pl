@@ -75,10 +75,10 @@ sub AddOrUpdate {
    }
    #return if ($found eq 1 && $mod eq 0);
 
-        # Add new rule
+   # Add new rule
    &INFO("Adding new rule: $port/$proto $ip");
    $ip = "any" if ($ip eq "*");
-   print "$UFW allow from $ip to any port $port proto $proto comment '$signature'\n";
+   &DEBUG("$UFW allow from $ip to any port $port proto $proto comment '$signature'");
    print `$UFW allow from $ip to any port $port proto $proto comment '$signature'`
 }
 
